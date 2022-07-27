@@ -1,7 +1,6 @@
 import "./index.css";
 import React, { useState, useEffect } from "react";
 import Tours from "./Tours";
-import { toBeRequired } from "@testing-library/jest-dom/dist/matchers";
 const url = "https://course-api.com/react-tours-project";
 
 function App() {
@@ -25,7 +24,7 @@ function App() {
     setTourList(newList);
   };
 
-  useState(() => {
+  useEffect(() => {
     dataHandler();
   }, []);
 
